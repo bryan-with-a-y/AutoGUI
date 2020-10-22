@@ -33,10 +33,22 @@ def enter_card():
 def minimize_window():
     keyboard.press_and_release("windows+down")
 
+def enter_english_input():
+    keyboard.press_and_release("ctrl+shift+1")
+
+def enter_korean_input():
+    keyboard.press_and_release("ctrl+shift+2")
+
+def enter_japanese_input():
+    keyboard.press_and_release("ctrl+shift+3")
+
 def main():
     keyboard.add_hotkey('ctrl+shift+p', lambda: parse_word())
     keyboard.add_hotkey('ctrl+shift+h', lambda: edit_last_word())
     keyboard.add_hotkey('ctrl+shift+enter', lambda: enter_card())
+    keyboard.add_hotkey('ctrl+shift+1', lambda: enter_english_input())
+    keyboard.add_hotkey('ctrl+shift+2', lambda: enter_korean_input())
+    keyboard.add_hotkey('ctrl+shift+3', lambda: enter_japanese_input())
 
     print("Press esc to exit keyboard profile")
     minimize_window()
