@@ -3,6 +3,7 @@
 class ProfileSelector(object):
     def __init__(self):
         self.profiles = ["laptop", "desktop"]
+        return self.get_profile()
 
     def get_profile(self):
         for i in range(len(self.profiles)):
